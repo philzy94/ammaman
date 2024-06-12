@@ -6,12 +6,12 @@ import Footer from './components/footer';
 import Navbar from './components/navbar';
 // import Preloader from './components/preloader';
 import About from './pages/about';
-import Blogs from './pages/blogs';
 import BlogsInfo from './pages/blogsInfo';
 import Experience from './pages/experience';
 import Home from './pages/home';
 import Projects from './pages/projects';
 import Skills from './pages/skills';
+import Contact from './pages/contact';
 
 function App() {
   useEffect(() => {
@@ -25,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className="">
       {/* <Preloader></Preloader> */}
       <Navbar />
       <Routes>
@@ -34,18 +34,18 @@ function App() {
           element={
             <>
               <Home></Home>
+              <About></About>
               <Experience></Experience>
               <Projects></Projects>
-              <Blogs></Blogs>
               <Skills></Skills>
-              <About></About>
+              <Contact></Contact>
               <Footer></Footer>
             </>
           }
         ></Route>
         <Route path="/blogs-info/:name" element={<BlogsInfo></BlogsInfo>}></Route>
       </Routes>
-    </>
+    </div>
   );
 }
 

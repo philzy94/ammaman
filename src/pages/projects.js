@@ -7,43 +7,45 @@ import OJ from '../assets/oj.webp';
 
 export default function Projects() {
   return (
-    <div className=" relative overflow-hidden bg-slate-50" id="projects">
-      <div className=" mx-auto max-w-6xl p-5 py-8 md:py-20" id="experience">
-        <div className="mb-8 md:mb-16 pb-4 text-6xl font-medium text-gray-300 md:text-left md:text-7xl">
-          Projects
-        </div>
+    <div className=" relative h-screen overflow-hidden md:px-52" id="projects">
+      <div className=" mx-auto max-w-6xl p-5 pb-8 pt-10   md:py-20" id="experience">
+        <h3 className="mt-3 text-2xl font-extrabold">Featured Projects</h3>
+        <p className="mb-4 text-gray-600">Here are few of the projects i&apos;ve worked on.</p>
 
-        <div className="overflow-x-auto space-x-4 no-scrollbar snap-x-mandatory">
-        <div className='flex gap-4 py-4 snap-start'>
-        {projects.map((proj, index) => {
-            return (
-              <div className="space-y-4 bg-white p-4 shadow-md min-w-[300px]" key={`project${index}`}>
-                <div className="relative h-32 overflow-hidden border-b">
-                  <img alt="" src={proj.img} className="absolute left-0 my-auto w-full "></img>
+        <div className="no-scrollbar snap-x-mandatory space-x-4 overflow-x-auto">
+          <div className="flex snap-start gap-4 py-4">
+            {projects.map((proj, index) => {
+              return (
+                <div
+                  className="min-w-[300px] space-y-4 bg-white p-4 shadow-md"
+                  key={`project${index}`}
+                >
+                  <div className="relative h-32 overflow-hidden border-b">
+                    <img alt="" src={proj.img} className="absolute left-0 my-auto w-full "></img>
+                  </div>
+                  <div className="text-2xl text-cyan-500">{proj.title}</div>
+                  <div className="h-20 overflow-y-auto text-xs font-light text-gray-400">
+                    {proj.details}
+                  </div>
+                  <div className="flex items-center justify-end space-x-4 opacity-40">
+                    {proj.links.map((link, index) => {
+                      return (
+                        <a
+                          href={link.link}
+                          target={'_blank'}
+                          rel="noreferrer"
+                          className="flex h-5 cursor-pointer items-center text-2xl text-gray-500"
+                          key={`project-link${index + proj.title}`}
+                        >
+                          {link.icon}
+                        </a>
+                      );
+                    })}
+                  </div>
                 </div>
-                <div className="text-2xl text-cyan-500">{proj.title}</div>
-                <div className="h-20 overflow-y-auto text-xs font-light text-gray-400">
-                  {proj.details}
-                </div>
-                <div className="flex items-center justify-end space-x-4 opacity-40">
-                  {proj.links.map((link, index) => {
-                    return (
-                      <a
-                        href={link.link}
-                        target={'_blank'}
-                        rel="noreferrer"
-                        className="flex h-5 cursor-pointer items-center text-2xl text-gray-500"
-                        key={`project-link${index + proj.title}`}
-                      >
-                        {link.icon}
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>

@@ -2,16 +2,17 @@ import React from 'react';
 
 export default function Skills() {
   return (
-    <div className=" mx-auto max-w-6xl p-5 py-8 md:py-20" id="skills">
-      <div className="mb-8 md:mb-16 pb-4 text-6xl font-medium text-gray-300 md:text-left md:text-7xl">
-        Skills
-      </div>
+    <div
+      className="flex flex-col justify-center bg-slate-50 p-5 py-8 md:px-52 md:py-20"
+      id="skills"
+    >
+      <h3 className="mb-3 text-2xl font-extrabold">Skills/Tools</h3>
 
       <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
         {skills.map((skill, index) => {
           return (
             <div className="flex items-center space-x-2" key={`skill${index}`}>
-              {skill.icon && <div className="text-2xl flex">{skill.icon}</div>}
+              {skill.icon && <div className="flex text-2xl">{skill.icon}</div>}
               {skill.img && <img src={skill.img} className="h-6 w-6" alt=""></img>}
               <div className=" text-gray-500">{skill.skill}</div>
             </div>
@@ -29,7 +30,7 @@ const skills = [
   },
   {
     icon: <i className="devicon-go-original-wordmark colored"></i>,
-    skill: "Go",
+    skill: 'Go',
   },
   {
     icon: <i className="devicon-apachekafka-original colored"></i>,
