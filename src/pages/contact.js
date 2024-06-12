@@ -2,7 +2,11 @@ import React from 'react';
 
 export default function Contact() {
   return (
-    <div className="flex h-screen flex-col justify-center p-5 py-8  md:px-52 md:py-20" id="contact">
+    <div
+      data-aos="fade-up"
+      className="flex h-screen flex-col justify-center p-5 py-8  md:px-52 md:py-20"
+      id="contact"
+    >
       <div className="">
         <h3 className="mb-3 text-2xl font-extrabold">Contact me</h3>
 

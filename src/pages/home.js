@@ -4,7 +4,11 @@ import SocialIcons from '../components/socialIcons';
 
 export default function Home() {
   return (
-    <div id="home" className="flex h-screen flex-col items-center justify-center bg-gray-50">
+    <div
+      data-aos="fade-up"
+      id="home"
+      className="flex h-screen flex-col items-center justify-center bg-gray-50"
+    >
       <div className="text-center">
         <div className="mx-auto mb-3 h-40 w-40 overflow-hidden rounded-full shadow">
           <img

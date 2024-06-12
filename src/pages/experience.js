@@ -4,6 +4,7 @@ import { getDriveUrlById } from '../utils';
 export default function Experience() {
   return (
     <div
+      data-aos="fade-up"
       className="justify-cente flex h-full w-screen flex-col bg-slate-50 p-5 py-8 md:px-52 md:py-20"
       id="experience"
     >

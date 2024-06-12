@@ -7,9 +7,13 @@ import OJ from '../assets/oj.webp';
 
 export default function Projects() {
   return (
-    <div className=" relative h-screen overflow-hidden md:px-52" id="projects">
-      <div className=" mx-auto max-w-6xl p-5 pb-8 pt-10   md:py-20" id="experience">
-        <h3 className="mt-3 text-2xl font-extrabold">Featured Projects</h3>
+    <div
+      data-aos="fade-up"
+      className="relative flex h-screen flex-col justify-center overflow-hidden p-5 py-8 md:py-20 md:px-52"
+      id="projects"
+    >
+      <div className=" mx-auto w-full pb-8">
+        <h3 className="text-2xl font-extrabold">Featured Projects</h3>
         <p className="mb-4 text-gray-600">Here are few of the projects i&apos;ve worked on.</p>
 
         <div className="no-scrollbar snap-x-mandatory space-x-4 overflow-x-auto">

@@ -3,7 +3,8 @@ import React from 'react';
 export default function Skills() {
   return (
     <div
-      className="flex flex-col justify-center bg-slate-50 p-5 py-8 md:px-52 md:py-20"
+      data-aos="fade-up"
+      className="flex h-screen flex-col justify-center bg-slate-50 p-5 py-8 md:px-52 md:py-20"
       id="skills"
     >
       <h3 className="mb-3 text-2xl font-extrabold">Skills/Tools</h3>

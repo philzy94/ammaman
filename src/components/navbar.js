@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [showNav, setShowNav] = useState(false);
@@ -28,48 +29,60 @@ export default function Navbar() {
         <i className="fa fa-bars" aria-hidden="true"></i>
       </div>
       <div className={`tabs ${showNav && 'mobile-tabs'}`}>
-        <a
-          onClick={closeMobileNav}
-          href="#home"
-          className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
-        >
-          Home
-        </a>
-        <a
-          onClick={closeMobileNav}
-          href="#about"
-          className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
-        >
-          About
-        </a>
-        <a
-          onClick={closeMobileNav}
-          href="#experience"
-          className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
-        >
-          Experience
-        </a>
-        <a
-          onClick={closeMobileNav}
-          href="#projects"
-          className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
-        >
-          Projects
-        </a>
-        <a
-          onClick={closeMobileNav}
-          href="#skills"
-          className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
-        >
-          Skills
-        </a>
-        <a
-          onClick={closeMobileNav}
-          href="#contact"
-          className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
-        >
-          Contact
-        </a>
+        <Link to="/">
+          <a
+            onClick={closeMobileNav}
+            href=""
+            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+          >
+            Home
+          </a>
+        </Link>
+        <Link to="/about">
+          <a
+            onClick={closeMobileNav}
+            href=""
+            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+          >
+            About
+          </a>
+        </Link>
+        <Link to="/experience">
+          <a
+            onClick={closeMobileNav}
+            href=""
+            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+          >
+            Experience
+          </a>
+        </Link>
+        <Link to="/projects">
+          <a
+            onClick={closeMobileNav}
+            href=""
+            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+          >
+            Projects
+          </a>
+        </Link>
+        <Link to="/skills">
+          <a
+            onClick={closeMobileNav}
+            href=""
+            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+          >
+            Skills
+          </a>
+        </Link>
+        <Link to="/contact">
+          <a
+            onClick={closeMobileNav}
+            href=""
+            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+          >
+            Contact
+          </a>
+        </Link>
       </div>
     </div>
   );
