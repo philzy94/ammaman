@@ -5,7 +5,6 @@ import SocialIcons from '../components/socialIcons';
 export default function Home() {
   return (
     <div id="home" className="flex h-screen flex-col items-center justify-center bg-gray-50">
-      <br />
       <div className="text-center">
         <div className="mx-auto mb-3 h-40 w-40 overflow-hidden rounded-full shadow">
           <img
@@ -22,7 +21,10 @@ export default function Home() {
         <a href="#about" className="inline-flex items-center text-xs font-medium text-gray-500">
           Read more about me →
         </a>
-        <div className="absolute bottom-0 left-0 right-0 flex justify-center py-2">
+        <br />
+        <br />
+        <br />
+        <div className="bottom-0 left-0 right-0 flex justify-center py-2">
           <ul>
             <SocialIcons />
           </ul>
