@@ -4,7 +4,7 @@ import { getDriveUrlById } from '../utils';
 export default function Experience() {
   return (
     <div
-      data-aos="fade-up"
+      data-aos="zoom-in"
       className="justify-cente flex h-full w-screen flex-col bg-slate-50 p-5 pt-20 md:px-52"
       id="experience"
     >

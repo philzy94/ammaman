@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function Home() {
   return (
     <div
-      data-aos="fade-up"
+      data-aos="zoom-in"
       id="home"
       className="flex h-screen flex-col items-center justify-center bg-gray-50"
     >

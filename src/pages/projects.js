@@ -49,7 +49,7 @@ export default function Projects() {
   };
   return (
     <div
-      data-aos="fade-up"
+      data-aos="zoom-in"
       className="relative flex h-full flex-col justify-center overflow-hidden p-5 pt-20 md:px-52"
       id="projects"
     >
@@ -131,7 +131,8 @@ export default function Projects() {
 const projects = [
   {
     title: 'Worknation',
-    description: 'ence in purchasing electricity units.',
+    description:
+      'Workrnation is a workforce platform that connects employers with job seekers and also provides training opportunities to interested users.',
     image: wn1,
     link: 'https://www.worknation.ng',
     textColour: 'text-white',
@@ -139,9 +140,9 @@ const projects = [
     stack: ['React.js', 'Nest js'],
   },
   {
-    title: 'DasarawaDSR',
+    title: 'NasarawaDSR',
     description:
-      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+      'NasarawaDSR is a digital distribution system for adiquately distributing palliative to needed individuals in Nasarawa State.',
     image: dsr1,
     link: 'https://nasarawadsr.vercel.app',
     textColour: 'text-white',
@@ -151,17 +152,17 @@ const projects = [
   {
     title: 'Ischools',
     description:
-      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+      'Ischools is a school management system that provides a digitalized school management system for schools and also provides detailed data about schools around a region. It harmonises the activities among schools and brings the best out of schools.',
     image: isch,
     link: 'https://ischools.ng',
     textColour: 'text-white',
     stack: ['Angular', 'Laravel'],
-    bg: 'bg-[#223691]',
+    bg: 'bg-[#2B3EEE]',
   },
   {
     title: 'Ourakademy',
     description:
-      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+      'Ourakademy is a platform that provides training in partnership with Qwasar to produce well skilled and tallented individuals in the tech industry',
     image: oga1,
     link: 'https://ourakademy-admin.ogtlprojects.com',
     textColour: 'text-white',
@@ -171,7 +172,7 @@ const projects = [
   {
     title: 'OTNI',
     description:
-      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+      "Outsource to Nigeria Initiative is a private sector lead National Job Creation Initiative in conjunction with the Presidency under the Office of the Vice President. Its primary aim is to bolster Nigeria's economic standing by generating foreign exchange through BPO/ITES service exports resulting in massive job creation, thereby enhancing the nation's GDP and balance of trade.",
     image: otni,
     link: 'https://otni.gov.ng',
     textColour: 'text-white',
@@ -181,7 +182,7 @@ const projects = [
   {
     title: 'Outsource Global',
     description:
-      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+      'Outsource Global is an outsourcing company that connects with cleints both national and international to provide services in different sectors.',
     image: og,
     link: 'https://www.outsourceglobal.com',
     textColour: 'text-white',
@@ -191,7 +192,7 @@ const projects = [
   {
     title: 'Paylidate',
     description:
-      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+      'Paylidate is an Escrow platform that mitigates online fraud between buyers and sellers, and also provides digital wallet tp interested users for payment.',
     image: pay,
     link: '',
     textColour: 'text-white',

@@ -3,7 +3,7 @@ import React from 'react';
 export default function Contact() {
   return (
     <div
-      data-aos="fade-up"
+      data-aos="zoom-in"
       className="flex h-screen flex-col justify-center p-5 py-8  md:px-52 md:py-20"
       id="contact"
     >
