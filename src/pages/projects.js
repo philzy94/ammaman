@@ -117,6 +117,7 @@ export default function Projects() {
             })}
           </Slider>
         </div>
+        <br />
         <h3 className="mt-3 text-2xl font-extrabold">Let&apos;s work together</h3>
         <p className="mb-8 text-gray-600">
           I am currently open to work engagements. If i look like who you&apos;re looking for, reach
