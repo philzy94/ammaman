@@ -11,7 +11,7 @@ import pay from '../assets/projects/pay.png';
 
 export default function Projects() {
   var settings = {
-    dots: false,
+    dots: true,
     arrows: false,
     infinite: true,
     speed: 800,
