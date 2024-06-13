@@ -4,7 +4,12 @@ module.exports = {
     fontFamily: {
       sans: 'Nunito',
     },
-    extend: {},
+
+    extend: {
+      textAlign: {
+        justify: 'justify',
+      },
+    },
   },
   plugins: [],
 };

@@ -18,12 +18,11 @@ export default function About() {
               for acquiring new skills and sharing my knowledge. Taking on complex challenges is a
               personal passion of mine. I prefer not to adhere to a single technique for an extended
               period and instead proactively seek alternative approaches to tasks. I strongly
-              believe that being a jack of all trades and master of none is often better than being
-              a master of one.
+              believe that being a jack of all trades and master of one is often better.
             </div>
           </div>
         </div>
-        <div className="justify-between md:flex">
+        <div className="items-center justify-between md:flex">
           <div className="flex items-center justify-center space-x-4 py-10">
             {social.map((link, index) => {
               return (
@@ -34,24 +33,26 @@ export default function About() {
                   rel="noreferrer"
                   className="relative rounded-full"
                 >
-                  <img src={link.icon} className="h-10 w-10" alt=""></img>
+                  <img src={link.icon} className="h-[20px] w-[20px]" alt=""></img>
                 </a>
               );
             })}
           </div>
-          <a
-            className="relative m-auto flex w-max cursor-pointer items-center space-x-4 rounded-lg border bg-slate-200 p-2 px-10"
-            href={'https://drive.google.com/file/d/1L-MxXB76Db6NCn7eTmeS2OZa-PhlBEt5/view'}
-            target={'_blanck'}
-            rel="noreferrer"
-          >
-            <div>Resume</div>
-            <img
-              className="h-6 w-6"
-              src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-              alt=""
-            ></img>
-          </a>
+          <div className="flex items-center justify-center">
+            <a
+              className="flex w-max cursor-pointer items-center space-x-4 rounded-lg border bg-slate-200 p-2 px-9"
+              href={'https://drive.google.com/file/d/1L-MxXB76Db6NCn7eTmeS2OZa-PhlBEt5/view'}
+              target={'_blanck'}
+              rel="noreferrer"
+            >
+              <div>Resume</div>
+              <img
+                className="h-6 w-6"
+                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
+                alt=""
+              ></img>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -60,19 +61,27 @@ export default function About() {
 
 const social = [
   {
-    icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg',
-    link: 'https://www.linkedin.com/in/vedant-daigavane-25785315a/',
+    icon: 'https://cdn-icons-png.flaticon.com/128/6422/6422202.png',
+    link: 'https://www.linkedin.com/in/shekari-philemon-85882a179',
   },
   {
     icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg',
-    link: 'https://github.com/daigavane70',
+    link: 'https://github.com/philzy94',
   },
   {
-    icon: 'https://cdn-icons-png.flaticon.com/512/1384/1384063.png',
-    link: 'https://www.instagram.com/vedant_daigavane/',
+    icon: 'https://cdn-icons-png.flaticon.com/128/12107/12107562.png',
+    link: 'https://x.com/Philzy94',
   },
   {
-    icon: 'https://cdn-icons-png.flaticon.com/512/732/732200.png',
-    link: 'mailto: daigavane70@gmail.com',
+    icon: 'https://cdn-icons-png.flaticon.com/128/3916/3916849.png',
+    link: 'mailto: holyphilzy@gmail.com',
+  },
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/128/5068/5068731.png',
+    link: '+2349079603505',
+  },
+  {
+    icon: 'https://cdn-icons-png.flaticon.com/128/6422/6422213.png',
+    link: 'https://wa.me/+2348182746404',
   },
 ];

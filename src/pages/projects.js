@@ -64,7 +64,7 @@ export default function Projects() {
                 <div className={`${proj?.textColour} mb-2 h-full px-2`} key={`project${index}`}>
                   <div className={`${proj?.bg} rounded-lg p-2 shadow-lg`}>
                     <h3 className="text-2xl font-bold">{proj?.title}</h3>
-                    <p className="my-3 truncate font-medium">{proj?.description}</p>
+                    <p className="my-3 truncate text-justify font-medium">{proj?.description}</p>
                     <img
                       src={proj?.image}
                       className="mb-4 w-full object-fill shadow-lg"

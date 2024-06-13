@@ -11,7 +11,7 @@ export default function Contact() {
         <h3 className="mb-3 text-2xl font-extrabold">Contact me</h3>
 
         <div>
-          <p className="mb-4 text-sm font-normal text-gray-500">
+          <p className="mb-4 text-justify text-sm font-normal text-gray-500">
             If i look like someone you&apos;d love to work with, feel free to send me an email. I
             usually respond to important emails in a timely manner. Another easy way to contact me
             is on twitter, I&apos;m quite responsive there too.

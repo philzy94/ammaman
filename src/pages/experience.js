@@ -1,5 +1,4 @@
 import React from 'react';
-import { getDriveUrlById } from '../utils';
 
 export default function Experience() {
   return (
@@ -15,38 +14,46 @@ export default function Experience() {
         </p>
         {experiences.map((exp) => {
           return (
-            <div className=" mb-10" key={`experience${exp.company}`}>
+            <div className=" mb-10" key={`experience${exp?.company}`}>
               <div className="mb-2 flex flex-row items-center border-b-[1px] border-b-gray-200 pb-2">
                 <div className="mr-4 flex h-[32px] w-[32px] items-center justify-center">
                   <img
-                    className="max-h-full max-w-full transform cursor-pointer rounded-md transition ease-in hover:scale-105"
+                    className="max-h-full max-w-full transform cursor-pointer rounded-md transition ease-in hover:scale-150"
                     src={
-                      exp.img ||
+                      exp?.img ||
                       'https://icons.veryicon.com/png/o/miscellaneous/zr_icon/company-23.png'
                     }
                     alt=""
-                    onClick={() => window.open(exp.companyUrl || window.location, '_blank')}
+                    onClick={() => window.open(exp?.companyUrl || window.location, '_blank')}
                   />
                 </div>
 
                 <div className="flex-1 cursor-pointer">
-                  <div className="text-lg font-bold md:text-lg">{exp.company}</div>
+                  <div className="text-lg font-bold md:text-lg">{exp?.company}</div>
                   <div className="flex justify-between md:flex-row">
                     <div className="text-md md:text-md font-semibold text-gray-600">
-                      {exp.position}
+                      {exp?.position}
                     </div>
-                    <div className="text-sm font-semibold">{exp.date}</div>
+                    <div className="text-sm font-semibold">{exp?.date}</div>
                   </div>
                 </div>
               </div>
 
-              <div className=" pl-4 text-sm font-normal text-gray-500">
-                <ul className="list-disc">
-                  {exp.details.map((detail, index) => (
-                    <li key={`exp-details${index + exp.company}`}>{detail}</li>
-                  ))}
-                </ul>
+              <div className=" text-md px-4 text-justify font-normal  text-gray-500">
+                <p>{exp?.details}</p>
               </div>
+              {exp?.companyUrl && (
+                <div className="flex flex-row justify-end">
+                  <a
+                    href={exp?.companyUrl}
+                    target="_blank"
+                    className=" pl-4 text-xs font-medium text-gray-500"
+                    rel="noreferrer"
+                  >
+                    Visit website →
+                  </a>
+                </div>
+              )}
             </div>
           );
         })}
@@ -57,56 +64,40 @@ export default function Experience() {
 
 const experiences = [
   {
-    position: 'SDE 1 Full-Stack',
-    company: 'Upstox',
-    details: [
-      'Architected a comprehensive and portable notification service capable of delivering Email, SMS, and push notifications to 10M+ users on both mobile apps and the web with the help of Java Spring Boot and Apache Kafka.',
-      'Spearheaded implementation of data retrieval jobs from services like Morningstar, leveraging Thread Pools for async data handling; streamlined processes, reducing data retrieval time by 50% and achieving 99.9% job success rate.',
-      'Utilized advanced monitoring and bug resolution tools such as Prometheus, Athena, Sumo Logic, and Datadog to ensure proactive monitoring and efficient bug resolution within the software ecosystem.',
-      'Worked on a Rundeck Job to fetch active IPO details at a specific interval from NSE and update on Upstox’s platform.',
-      'HolidayMaster processor to update trading holidays from a CSV file into MySQL using java.nio.',
-      'Service to generate portfolio statement of the user in the form of PDF file using Thymeleaf template engine.',
-      'Spearheaded the development of Personal Loans and Peer-to-Peer investing platforms, crafting intricate UI components for user-friendly loan configuration and optimal selection.',
-      'Engineered Government Bonds securities and Sovereign gold bonds applications with Next.js, significantly enhancing performance by reducing bundle size from 5.13MB to 735KB, thereby minimizing loading times.',
-      'Created Personal Loans and Peer-to-peer investing web applications using Next.js, this platform is used by 50k people on an average monthly.',
-    ],
-    date: 'Aug 2023 - Present',
-    img: 'https://media.licdn.com/dms/image/C4E0BAQHqu3S3cd_R-g/company-logo_200_200/0/1631600709019/upstox_logo?e=1720656000&v=beta&t=sIlL9hdqYlnj0_rKh6CMDz7r-5E781VALgnJnc7IQlk',
-    companyUrl: 'https://upstox.com/',
+    position: 'Frontend Developer',
+    company: 'Outsource Global',
+    details:
+      'Outsource Global is an outsourcing company that connects with cleints both national and international to provide services in different sectors. I am currently working as a frontend developer, building a web application with React.Js to consume an API built in the company.',
+    date: 'Sep 2022 – Till Date',
+    img: 'https://www.outsourceglobal.com/logo.png',
+    companyUrl: 'https://www.outsourceglobal.com/',
+  },
+
+  {
+    position: 'Full-Stack Developer',
+    company: 'CodeIcon,',
+    details:
+      'CodeIcon is an IT firm in Nigerian based in Kaduna State, it provides solutions to clients to help them achieve their goals. I stated working as an intern but currently working as a full software developer, building solutions to for clients.',
+    date: 'July 2019 - Till date',
+    img: 'https://codeicontechnologies.com/images/codeicon.png',
+    companyUrl: 'https://codeicontechnologies.com',
   },
   {
-    position: 'SDE Intern',
-    company: 'Upstox',
-    details: [
-      'Designed and implemented a file processor service utilizing java.nio to facilitate the seamless update of trading holiday, order details, and fund information from CSV files into a MySQL database.',
-      'Contributed to migrating the IPO backend service from Node.js to Spring Boot, enhancing concurrency and strengthening platform reliability within the Java ecosystem, resulting in improved performance and scalability.',
-      'Contributed to enhancing the user interface of mutual funds and IPO applications, leveraging React.JS for development.',
-    ],
+    position: 'Full-Stack Developer',
+    company: 'Lotusfort Technologies Limited',
+    details:
+      'Lotusfort Technologies Limited (LTL) is a Technology development, Research and IT consulting company. I worked as a full-stack developer, building and developing applications like paylidate, digital wallet and other applications using VueJs and Laravel.',
     date: 'Jan 2022 - Jul 2023',
-    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHiwLODfSkJb0pWA7g_GUM-lZ80WNm5fbz0c-kVD7ShQ&s',
-    companyUrl: 'https://upstox.com/',
-  },
-  {
-    position: 'SDE Intern',
-    company: 'Finlegal Business Solutions Pvt. Ltd.',
-    details: [
-      'Worked on an application facilitating patients to book appointments with doctors across multiple organizations.',
-      'Leveraged Next.js for frontend development and Storybook for efficient frontend component creation.',
-      'Employed Express.js, GraphQL, PostgreSQL, and AWS S3 for API development.',
-    ],
-    date: 'Nov 2021 - Jan 2022',
-    img: 'https://quoppo.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F1257ac6f-9946-42db-b9e2-f3cc144c8f6f%2Flogo-quoppo.svg?table=block&id=4cb5c073-3ad4-4778-917f-36d5fbf14a96&spaceId=011a789e-d422-42dc-b920-56a90df1c604&userId=&cache=v2',
-    companyUrl: 'https://quoppo.notion.site/',
+    img: 'https://static.b2bhint.com/_next/image?url=https%3A%2F%2Fcdn.b2bhint.com%2Fcompany-avatar%2Fupload_830f5c4651aa231d783dc61482450a58.jpg&w=128&q=75',
+    companyUrl: '',
   },
   {
     position: 'Full-Stack Developer Intern',
-    company: 'Sorceo Technologies Pvt. Ltd.',
-    details: [
-      'Developed a Vendor Management System and Auction Platform, incorporating secure authentication with Auth0. Utilized Express.js, React.js, and Redux for efficient implementation.',
-      'Built a globally-serving platform catering to top multinational corporations.',
-    ],
-    date: 'Aug 2021 - Oct 2021',
-    img: getDriveUrlById('1KZ58TeoC6spgG2HIJUwE8OTCyqR8bw-Q'),
-    companyUrl: 'http://www.sorceotech.com/',
+    company: '(ICTSS)',
+    details:
+      'ICTSS is an IT security institute that deals with IT security. I worked with ICTSS as an itern during my 6 months indurial traing, I was working as a software developer intern building software applications,',
+    date: 'Oct 2016 - OMar 2017',
+    img: null,
+    companyUrl: '',
   },
 ];
