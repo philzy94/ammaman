@@ -102,7 +102,7 @@ export default function Projects() {
                         <a
                           target="_blank"
                           href={proj?.link}
-                          className="my-3 font-medium"
+                          className="my-3 truncate font-medium"
                           rel="noreferrer"
                         >
                           {proj?.link}
