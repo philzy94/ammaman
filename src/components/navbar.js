@@ -21,7 +21,7 @@ export default function Navbar() {
   window.onresize = closeMobileNavOnResize;
 
   return (
-    <div className="topbar w-full">
+    <div className="topbar w-full bg-white">
       <div className="profile-pic">
         <img src="{ProfilePic}" alt="" />
       </div>
