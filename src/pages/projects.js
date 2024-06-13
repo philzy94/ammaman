@@ -70,7 +70,7 @@ export default function Projects() {
                       className="mb-4 w-full object-fill shadow-lg"
                       align={proj?.title}
                     />
-                    <p className="mb-4 font-medium">
+                    <p className="mb-2 font-medium">
                       <svg
                         className="mr-1 inline h-4 w-4"
                         fill="none"
@@ -86,7 +86,7 @@ export default function Projects() {
                         return item + ', ';
                       })}
                     </p>
-                    <p className="font-medium">
+                    <p className=" flex flex-row items-center font-medium">
                       <svg
                         className="mr-1 inline h-4 w-4"
                         fill="none"
@@ -102,7 +102,7 @@ export default function Projects() {
                         <a
                           target="_blank"
                           href={proj?.link}
-                          className="my-3 truncate font-medium"
+                          className=" truncate font-medium"
                           rel="noreferrer"
                         >
                           {proj?.link}
