@@ -1,6 +1,7 @@
 import React from 'react';
 import profilePic from '../assets/dp.png'; // Update the path to your image
 import SocialIcons from '../components/socialIcons';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -22,9 +23,12 @@ export default function Home() {
         <p className="text-xl text-gray-600">
           I&apos;m a full-stack developer based in Kaduna, Nigeria.
         </p>
-        <a href="#about" className="inline-flex items-center text-xs font-medium text-gray-500">
-          Read more about me →
-        </a>
+        <Link to="/about">
+          <a href="" className="inline-flex items-center text-xs font-medium text-gray-500">
+            Read more about me →
+          </a>
+        </Link>
+
         <br />
         <br />
         <br />

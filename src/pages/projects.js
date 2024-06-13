@@ -1,56 +1,127 @@
 import React from 'react';
-import Xenia from '../assets/xenia.webp';
-import Editorial from '../assets/editorial.webp';
-import RebuildHub from '../assets/rebuild-hub.webp';
-import Tradenza from '../assets/tradenza.webp';
-import OJ from '../assets/oj.webp';
+
+import Slider from 'react-slick';
+import wn1 from '../assets/projects/wn1.png';
+import dsr1 from '../assets/projects/dsr1.png';
+import isch from '../assets/projects/isch.png';
+import og from '../assets/projects/og.png';
+import oga1 from '../assets/projects/oga1.png';
+import otni from '../assets/projects/otni.png';
+import pay from '../assets/projects/pay.png';
 
 export default function Projects() {
+  var settings = {
+    dots: true,
+    arrows: true,
+    infinite: true,
+    speed: 800,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    cssEase: 'linear',
+    pauseOnHover: true,
+    pauseOnFocus: true,
+    responsive: [
+      {
+        breakpoint: 10000,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
   return (
     <div
       data-aos="fade-up"
-      className="relative flex h-screen flex-col justify-center overflow-hidden p-5 py-8 md:py-20 md:px-52"
+      className="relative flex h-full flex-col justify-center overflow-hidden p-5 py-8 md:py-20 md:px-52"
       id="projects"
     >
       <div className=" mx-auto w-full pb-8">
         <h3 className="text-2xl font-extrabold">Featured Projects</h3>
         <p className="mb-4 text-gray-600">Here are few of the projects i&apos;ve worked on.</p>
 
-        <div className="no-scrollbar snap-x-mandatory space-x-4 overflow-x-auto">
-          <div className="flex snap-start gap-4 py-4">
+        <div className="">
+          <Slider {...settings}>
             {projects.map((proj, index) => {
               return (
-                <div
-                  className="min-w-[300px] space-y-4 bg-white p-4 shadow-md"
-                  key={`project${index}`}
-                >
-                  <div className="relative h-32 overflow-hidden border-b">
-                    <img alt="" src={proj.img} className="absolute left-0 my-auto w-full "></img>
-                  </div>
-                  <div className="text-2xl text-cyan-500">{proj.title}</div>
-                  <div className="h-20 overflow-y-auto text-xs font-light text-gray-400">
-                    {proj.details}
-                  </div>
-                  <div className="flex items-center justify-end space-x-4 opacity-40">
-                    {proj.links.map((link, index) => {
-                      return (
+                <div className={`${proj?.textColour} mb-2 h-full px-2`} key={`project${index}`}>
+                  <div className={`${proj?.bg} rounded-lg p-2 shadow-lg`}>
+                    <h3 className="text-2xl font-bold">{proj?.title}</h3>
+                    <p className="my-3 truncate font-medium">{proj?.description}</p>
+                    <img
+                      src={proj?.image}
+                      className="mb-4 w-full object-fill shadow-lg"
+                      align={proj?.title}
+                    />
+                    <p className="mb-4 font-medium">
+                      <svg
+                        className="mr-1 inline h-4 w-4"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                      </svg>
+                      {proj?.stack?.map((item) => {
+                        return item + ', ';
+                      })}
+                    </p>
+                    <p className="font-medium">
+                      <svg
+                        className="mr-1 inline h-4 w-4"
+                        fill="none"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                      </svg>
+                      {proj?.link ? (
                         <a
-                          href={link.link}
-                          target={'_blank'}
+                          target="_blank"
+                          href={proj?.link}
+                          className="my-3 font-medium"
                           rel="noreferrer"
-                          className="flex h-5 cursor-pointer items-center text-2xl text-gray-500"
-                          key={`project-link${index + proj.title}`}
                         >
-                          {link.icon}
+                          {proj?.link}
                         </a>
-                      );
-                    })}
+                      ) : (
+                        'Link not available at the moment'
+                      )}
+                    </p>
                   </div>
                 </div>
               );
             })}
-          </div>
+          </Slider>
         </div>
+        <h3 className="mt-3 text-2xl font-extrabold">Let&apos;s work together</h3>
+        <p className="mb-8 text-gray-600">
+          I am currently open to work engagements. If i look like who you&apos;re looking for, reach
+          out to me. Shoot me an email at holyphilzy@gmail.com or tweet at me @philzy94
+        </p>
       </div>
     </div>
   );
@@ -58,102 +129,72 @@ export default function Projects() {
 
 const projects = [
   {
-    title: 'Online Judge',
-    details:
-      'An Online Judge platform whose primary goal was to host a coding contest and calculate real-time rankings on the basis of submissions made by the contestants. We have used ReactJS, and Redux to develop the client project. For the client-side we have used NodeJS, ExpressJS for API development, MongoDB as a database, Redis-Bull to maintain queue, docker for containerization of project, and Judge0 as code execution engine.',
-    img: OJ,
-    links: [
-      {
-        icon: (
-          <img
-            alt=""
-            src="https://img.icons8.com/ios-filled/50/000000/link--v1.png"
-            className="h-full"
-          ></img>
-        ),
-        link: 'https://oj-client.vercel.app/',
-      },
-      {
-        icon: <i className="devicon-github-original"></i>,
-        link: 'https://github.com/PCSB-Web-Team/online-judge-server',
-      },
-    ],
+    title: 'InstantEnergy',
+    description: 'ence in purchasing electricity units.',
+    image: wn1,
+    link: 'https://www.instantenergy.co.ke/',
+    textColour: 'text-white',
+    bg: 'bg-[hsl(165,60%,47%)]',
+    stack: ['React js', 'Nest js'],
   },
   {
-    title: 'Xenia Website',
-    details: "Built a website from scratch for PCSB's annual event Xenia.",
-    img: Xenia,
-    links: [
-      {
-        icon: (
-          <img
-            alt=""
-            src="https://img.icons8.com/ios-filled/50/000000/link--v1.png"
-            className="h-full"
-          ></img>
-        ),
-        link: 'https://pcsbxenia.com/',
-      },
-    ],
+    title: 'InstantEnergy',
+    description:
+      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+    image: dsr1,
+    link: 'https://www.instantenergy.co.ke/',
+    textColour: 'text-white',
+    stack: ['React js', 'Nest js'],
+    bg: 'bg-[#CA8A04]',
   },
   {
-    title: 'Rebuild Hub',
-    details:
-      'A web app that will bridge the gap between waste donors and waste collectors and will have a huge positive impact on collection of recyclable waste.',
-    img: RebuildHub,
-    links: [
-      {
-        icon: (
-          <img
-            alt=""
-            src="https://img.icons8.com/ios-filled/50/000000/link--v1.png"
-            className="h-full"
-          ></img>
-        ),
-        link: 'https://rebuild-hub.netlify.app/',
-      },
-      {
-        icon: <i className="devicon-github-original"></i>,
-        link: 'https://github.com/Rebuild-Hub/Rebuild-Hub-Client',
-      },
-    ],
+    title: 'InstantEnergy',
+    description:
+      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+    image: isch,
+    link: 'https://www.instantenergy.co.ke/',
+    textColour: 'text-white',
+    stack: ['React js', 'Nest js'],
+    bg: 'bg-[#223691]',
   },
   {
-    title: 'The Editorial',
-    img: Editorial,
-    details: "PICT Debsoc's Editorial website.",
-    links: [
-      {
-        icon: (
-          <img
-            alt=""
-            src="https://img.icons8.com/ios-filled/50/000000/link--v1.png"
-            className="h-full"
-          ></img>
-        ),
-        link: 'https://pictdebsoc.github.io/the_editorial/issue.html',
-      },
-      {
-        icon: <i className="devicon-github-original"></i>,
-        link: 'https://github.com/pictdebsoc/the_editorial',
-      },
-    ],
+    title: 'InstantEnergy',
+    description:
+      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+    image: oga1,
+    link: 'https://www.instantenergy.co.ke/',
+    textColour: 'text-white',
+    stack: ['React js', 'Nest js'],
+    bg: 'bg-[rgb(1,174,239)]',
   },
   {
-    title: 'Tradenza',
-    details: 'An Attempt to create a platform that will host a trading contest. Still in progress.',
-    img: Tradenza,
-    links: [
-      {
-        icon: (
-          <img
-            alt=""
-            src="https://img.icons8.com/ios-filled/50/000000/link--v1.png"
-            className="h-full"
-          ></img>
-        ),
-        link: 'https://60f5901158dfc928b3aef62c--tradenza.netlify.app/',
-      },
-    ],
+    title: 'InstantEnergy',
+    description:
+      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+    image: otni,
+    link: 'https://www.instantenergy.co.ke/',
+    textColour: 'text-white',
+    stack: ['React js', 'Nest js'],
+    bg: 'bg-[#22C55E]',
+  },
+  {
+    title: 'InstantEnergy',
+    description:
+      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+    image: og,
+    link: 'https://www.instantenergy.co.ke/',
+    textColour: 'text-white',
+    stack: ['React js', 'Nest js'],
+    bg: 'bg-[#01AEEF]',
+  },
+  {
+    title: 'InstantEnergy',
+    description:
+      'InstantEnergy is an electricity purchase platform that creates a seamless experience in purchasing electricity units.',
+    image: pay,
+    link: '',
+    textColour: 'text-white',
+    stack: ['React js', 'Nest js'],
+    bg: 'bg-[#F5722C]',
   },
 ];

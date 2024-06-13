@@ -31,7 +31,7 @@ export default function Experience() {
 
                 <div className="flex-1 cursor-pointer">
                   <div className="text-lg font-bold md:text-lg">{exp.company}</div>
-                  <div className="flex flex-col justify-between md:flex-row">
+                  <div className="flex justify-between md:flex-row">
                     <div className="text-md md:text-md font-semibold text-gray-600">
                       {exp.position}
                     </div>
@@ -40,7 +40,7 @@ export default function Experience() {
                 </div>
               </div>
 
-              <div className=" pl-4 text-sm tracking-wide text-gray-500">
+              <div className=" pl-4 text-sm font-normal text-gray-500">
                 <ul className="list-disc">
                   {exp.details.map((detail, index) => (
                     <li key={`exp-details${index + exp.company}`}>{detail}</li>

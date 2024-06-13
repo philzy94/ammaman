@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './components/footer';
 import Navbar from './components/navbar';
 import About from './pages/about';
 import Experience from './pages/experience';
@@ -42,7 +41,6 @@ function App() {
         <Route path="/skills" element={<Skills></Skills>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
       </Routes>
-      <Footer></Footer>
     </div>
   );
 }

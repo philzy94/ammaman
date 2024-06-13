@@ -12,7 +12,7 @@ export default function About() {
 
         <div className="items-center space-y-8 md:space-y-0">
           <div className="basis-2/3 space-y-4">
-            <div className="text-justify font-light text-gray-900">
+            <div className="text-justify text-sm font-normal text-gray-500">
               I am a highly enthusiastic and competitive person who enjoys being around individuals
               who challenge my limits, and I, in turn, strive to push them as well. I have a passion
               for acquiring new skills and sharing my knowledge. Taking on complex challenges is a
