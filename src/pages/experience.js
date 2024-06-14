@@ -30,7 +30,7 @@ export default function Experience() {
 
                 <div className="flex-1 cursor-pointer">
                   <div className="text-lg font-bold md:text-lg">{exp?.company}</div>
-                  <div className="flex justify-between md:flex-row">
+                  <div className="flex flex-wrap items-center justify-between gap-2 md:flex-row">
                     <div className="text-md md:text-md font-semibold text-gray-600">
                       {exp?.position}
                     </div>
