@@ -26,18 +26,6 @@ export default function Skills() {
 
 const skills = [
   {
-    icon: <i className="devicon-spring-plain colored"></i>,
-    skill: 'Spring',
-  },
-  {
-    icon: <i className="devicon-go-original-wordmark colored"></i>,
-    skill: 'Go',
-  },
-  {
-    icon: <i className="devicon-apachekafka-original colored"></i>,
-    skill: 'Apache Kafka',
-  },
-  {
     icon: <i className="devicon-nodejs-plain colored"></i>,
     skill: 'Node JS',
   },
@@ -45,30 +33,17 @@ const skills = [
     icon: <i className="devicon-express-original colored"></i>,
     skill: 'Express JS',
   },
-  {
-    icon: <i className="devicon-nginx-original colored"></i>,
-    skill: 'Nginx',
-  },
+
   {
     icon: <i className="devicon-react-original colored"></i>,
     skill: 'React',
   },
-  {
-    icon: <i className="devicon-redux-original colored"></i>,
-    skill: 'Redux',
-  },
-  {
-    icon: <i className="devicon-storybook-plain colored"></i>,
-    skill: 'Storybook',
-  },
+
   {
     icon: <i className="devicon-bootstrap-plain colored"></i>,
     skill: 'Bootstrap',
   },
-  {
-    icon: <i className="devicon-materialui-plain colored"></i>,
-    skill: 'Material UI',
-  },
+
   {
     icon: <i className="devicon-tailwindcss-plain colored"></i>,
     skill: 'Tailwind CSS',
@@ -81,22 +56,7 @@ const skills = [
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg',
     skill: 'Postman',
   },
-  {
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg',
-    skill: 'C++',
-  },
-  {
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg',
-    skill: 'Java',
-  },
-  {
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg',
-    skill: 'Python',
-  },
-  {
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg',
-    skill: 'C',
-  },
+
   {
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
     skill: 'JavaScript',
@@ -116,13 +76,5 @@ const skills = [
   {
     img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg',
     skill: 'PostgreSQL',
-  },
-  {
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg',
-    skill: 'Redis',
-  },
-  {
-    img: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
-    skill: 'Docker',
   },
 ];
