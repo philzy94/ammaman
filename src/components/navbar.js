@@ -33,7 +33,7 @@ export default function Navbar() {
           <a
             onClick={closeMobileNav}
             href=""
-            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+            className="tab-button text-xs font-bold uppercase text-gray-500 hover:text-gray-800"
           >
             Home
           </a>
@@ -42,7 +42,7 @@ export default function Navbar() {
           <a
             onClick={closeMobileNav}
             href=""
-            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+            className="tab-button text-xs font-bold uppercase text-gray-500 hover:text-gray-800"
           >
             About
           </a>
@@ -51,7 +51,7 @@ export default function Navbar() {
           <a
             onClick={closeMobileNav}
             href=""
-            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+            className="tab-button text-xs font-bold uppercase text-gray-500 hover:text-gray-800"
           >
             Experience
           </a>
@@ -60,7 +60,7 @@ export default function Navbar() {
           <a
             onClick={closeMobileNav}
             href=""
-            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+            className="tab-button text-xs font-bold uppercase text-gray-500 hover:text-gray-800"
           >
             Projects
           </a>
@@ -69,7 +69,7 @@ export default function Navbar() {
           <a
             onClick={closeMobileNav}
             href=""
-            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+            className="tab-button text-xs font-bold uppercase text-gray-500 hover:text-gray-800"
           >
             Skills
           </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
           <a
             onClick={closeMobileNav}
             href=""
-            className="tab-button text-xs font-bold uppercase text-gray-600 hover:text-gray-800"
+            className="tab-button text-xs font-bold uppercase text-gray-500 hover:text-gray-800"
           >
             Contact
           </a>
