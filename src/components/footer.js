@@ -1,19 +1,10 @@
 import React from 'react';
 
 export default function Footer() {
+  const date = new Date();
   return (
-    <div className="w-full justify-center space-x-2 bg-slate-100 p-5 text-center text-gray-400 md:flex">
-      <div>Created by Philemon Shekari</div>
-      <div>
-        <a
-          href="https://github.com/daigavane70/react-porfolio"
-          target={'_blank'}
-          rel="noreferrer"
-          className="text-cyan-500"
-        >
-          ( Repo Link )
-        </a>
-      </div>
+    <div className="flex w-full justify-center space-x-2 bg-slate-100 p-5 text-center text-gray-400">
+      <div>Copyright {date.getFullYear()} All rights reserved</div>
     </div>
   );
 }

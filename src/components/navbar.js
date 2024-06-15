@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="profile-pic">
         <img src="{ProfilePic}" alt="" />
       </div>
-      <div onClick={toggleNav} className="nav-toggler">
+      <div onClick={toggleNav} className="nav-toggler pt-1 pr-1">
         <i className="fa fa-bars" aria-hidden="true"></i>
       </div>
       <div className={`tabs ${showNav && 'mobile-tabs'}`}>
