@@ -12,14 +12,18 @@ export default function About() {
 
         <div className="items-center space-y-8 md:space-y-0">
           <div className="basis-2/3 space-y-4">
-            <div className="text-justify text-sm font-normal text-gray-500">
+            <p className="text-justify text-sm font-normal text-gray-500">
               I am a highly enthusiastic and competitive person who enjoys being around individuals
               who challenge my limits, and I, in turn, strive to push them as well. I have a passion
               for acquiring new skills and sharing my knowledge. Taking on complex challenges is a
               personal passion of mine. I prefer not to adhere to a single technique for an extended
-              period and instead proactively seek alternative approaches to tasks. I strongly
-              believe that being a jack of all trades and master of one is often better.
-            </div>
+              period and instead proactively seek alternative approaches to tasks.
+            </p>
+            <p className="text-justify text-sm font-normal text-gray-500">
+              My primary tools are HTML, CSS, JavaScript, and PHP. Although I frequently switch
+              between different languages, frameworks, and libraries, my current focus is on
+              Laravel, Vue.js, Tailwind CSS, Bootstrap, and React.js.
+            </p>
           </div>
         </div>
         <div className="items-center justify-between md:flex">
