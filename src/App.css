@@ -23,7 +23,7 @@
   display: none;
 }
 
-/* @media (max-width: 700px) {
+@media (max-width: 700px) {
   .topbar .nav-toggler {
     width: 100%;
   }
@@ -53,13 +53,13 @@
   .mobile-tabs a {
     display: block;
   }
-} */
+}
 
-/* .topbar .profile-pic {
+.topbar .profile-pic {
   width: 100%;
   text-align: center;
   display: none;
-} */
+}
 
 .topbar img {
   height: 200px;
