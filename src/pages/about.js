@@ -3,12 +3,8 @@ import Footer from '../components/footer';
 
 export default function About() {
   return (
-    <div className="flex h-screen flex-col justify-between">
-      <div
-        data-aos="zoom-in"
-        className="flex h-full flex-col justify-center p-5 py-8 md:px-52 md:py-20"
-        id="about"
-      >
+    <div className="flex min-h-[95vh] flex-col justify-between">
+      <div data-aos="zoom-in" className="flex flex-col p-5 py-8 md:px-52 md:py-20" id="about">
         <div className="">
           <h3 className="mb-3 text-2xl font-extrabold">A little more about me</h3>
 

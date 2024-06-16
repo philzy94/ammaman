@@ -8,6 +8,7 @@ import og from '../assets/projects/og.png';
 import oga1 from '../assets/projects/oga1.png';
 import otni from '../assets/projects/otni.png';
 import pay from '../assets/projects/pay.png';
+import Footer from '../components/footer';
 
 export default function Projects() {
   var settings = {
@@ -48,82 +49,85 @@ export default function Projects() {
     ],
   };
   return (
-    <div
-      data-aos="zoom-in"
-      className="relative flex h-full flex-col justify-center overflow-hidden p-5 pt-20 md:px-52"
-      id="projects"
-    >
-      <div className=" mx-auto w-full pb-8">
-        <h3 className="text-2xl font-extrabold">Featured Projects</h3>
-        <p className="mb-4 text-gray-600">Here are few of the projects i&apos;ve worked on.</p>
+    <div className="flex min-h-[95vh] flex-col justify-between">
+      <div
+        data-aos="zoom-in"
+        className="relative flex flex-col justify-center overflow-hidden p-5 pt-20 md:px-52"
+        id="projects"
+      >
+        <div className=" mx-auto w-full pb-8">
+          <h3 className="text-2xl font-extrabold">Featured Projects</h3>
+          <p className="mb-4 text-gray-600">Here are few of the projects i&apos;ve worked on.</p>
 
-        <div className="">
-          <Slider {...settings}>
-            {projects.map((proj, index) => {
-              return (
-                <div className={`${proj?.textColour} mb-2 h-full px-2`} key={`project${index}`}>
-                  <div className={`${proj?.bg} rounded-lg p-2 shadow-lg`}>
-                    <h3 className="text-2xl font-bold">{proj?.title}</h3>
-                    <p className="my-3 truncate text-justify font-medium">{proj?.description}</p>
-                    <img
-                      src={proj?.image}
-                      className="mb-4 w-full object-fill shadow-lg"
-                      align={proj?.title}
-                    />
-                    <p className="mb-2 font-medium">
-                      <svg
-                        className="mr-1 inline h-4 w-4"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
-                      </svg>
-                      {proj?.stack?.map((item) => {
-                        return item + ', ';
-                      })}
-                    </p>
-                    <p className=" flex flex-row items-center font-medium">
-                      <svg
-                        className="mr-1 inline h-4 w-4"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
-                      </svg>
-                      {proj?.link ? (
-                        <a
-                          target="_blank"
-                          href={proj?.link}
-                          className=" truncate font-medium"
-                          rel="noreferrer"
+          <div className="">
+            <Slider {...settings}>
+              {projects.map((proj, index) => {
+                return (
+                  <div className={`${proj?.textColour} mb-2 h-full px-2`} key={`project${index}`}>
+                    <div className={`${proj?.bg} rounded-lg p-2 shadow-lg`}>
+                      <h3 className="text-2xl font-bold">{proj?.title}</h3>
+                      <p className="my-3 truncate text-justify font-medium">{proj?.description}</p>
+                      <img
+                        src={proj?.image}
+                        className="mb-4 w-full object-fill shadow-lg"
+                        align={proj?.title}
+                      />
+                      <p className="mb-2 font-medium">
+                        <svg
+                          className="mr-1 inline h-4 w-4"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
                         >
-                          {proj?.link}
-                        </a>
-                      ) : (
-                        'Link not available at the moment'
-                      )}
-                    </p>
+                          <path d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"></path>
+                        </svg>
+                        {proj?.stack?.map((item) => {
+                          return item + ', ';
+                        })}
+                      </p>
+                      <p className=" flex flex-row items-center font-medium">
+                        <svg
+                          className="mr-1 inline h-4 w-4"
+                          fill="none"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="2"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                        </svg>
+                        {proj?.link ? (
+                          <a
+                            target="_blank"
+                            href={proj?.link}
+                            className=" truncate font-medium"
+                            rel="noreferrer"
+                          >
+                            {proj?.link}
+                          </a>
+                        ) : (
+                          'Link not available at the moment'
+                        )}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </Slider>
+                );
+              })}
+            </Slider>
+          </div>
+          <br />
+          <h3 className="mt-3 text-2xl font-extrabold">Let&apos;s work together</h3>
+          <p className="text-gray-6500 mb-8 text-justify">
+            I am currently open to work engagements. If i look like who you&apos;re looking for, you
+            can reach out to me via email at holyphilzy@gmail.com or social media.
+          </p>
         </div>
-        <br />
-        <h3 className="mt-3 text-2xl font-extrabold">Let&apos;s work together</h3>
-        <p className="text-gray-6500 mb-8 text-justify">
-          I am currently open to work engagements. If i look like who you&apos;re looking for, you
-          can reach out to me via email at holyphilzy@gmail.com or social media.
-        </p>
       </div>
+      <Footer />
     </div>
   );
 }

@@ -1,63 +1,68 @@
 import React from 'react';
+import Footer from '../components/footer';
 
 export default function Experience() {
   return (
-    <div
-      data-aos="zoom-in"
-      className="justify-cente flex h-full w-screen flex-col bg-slate-50 p-5 pt-20 md:px-52"
-      id="experience"
-    >
-      <div>
-        <h3 className="mt-5 text-2xl font-extrabold">Who I&apos;ve worked with</h3>
-        <p className="mb-4 text-gray-600">
-          I&apos;ve worked with quite a lot of client/companies, these are some of the notable ones.
-        </p>
-        {experiences.map((exp) => {
-          return (
-            <div className=" mb-10" key={`experience${exp?.company}`}>
-              <div className="mb-2 flex flex-row items-center border-b-[1px] border-b-gray-200 pb-2">
-                <div className="mr-4 flex h-[32px] w-[32px] items-center justify-center">
-                  <img
-                    className="max-h-full max-w-full transform cursor-pointer rounded-md transition ease-in hover:scale-150"
-                    src={
-                      exp?.img ||
-                      'https://icons.veryicon.com/png/o/miscellaneous/zr_icon/company-23.png'
-                    }
-                    alt=""
-                    onClick={() => window.open(exp?.companyUrl || window.location, '_blank')}
-                  />
-                </div>
+    <div className="flex min-h-[95vh] flex-col justify-between">
+      <div
+        data-aos="zoom-in"
+        className="justify-cente flex w-screen flex-col bg-slate-50 p-5 pt-20 md:px-52"
+        id="experience"
+      >
+        <div>
+          <h3 className="mt-5 text-2xl font-extrabold">Who I&apos;ve worked with</h3>
+          <p className="mb-4 text-gray-600">
+            I&apos;ve worked with quite a lot of client/companies, these are some of the notable
+            ones.
+          </p>
+          {experiences.map((exp) => {
+            return (
+              <div className=" mb-10" key={`experience${exp?.company}`}>
+                <div className="mb-2 flex flex-row items-center border-b-[1px] border-b-gray-200 pb-2">
+                  <div className="mr-4 flex h-[32px] w-[32px] items-center justify-center">
+                    <img
+                      className="max-h-full max-w-full transform cursor-pointer rounded-md transition ease-in hover:scale-150"
+                      src={
+                        exp?.img ||
+                        'https://icons.veryicon.com/png/o/miscellaneous/zr_icon/company-23.png'
+                      }
+                      alt=""
+                      onClick={() => window.open(exp?.companyUrl || window.location, '_blank')}
+                    />
+                  </div>
 
-                <div className="flex-1 cursor-pointer">
-                  <div className="text-lg font-bold md:text-lg">{exp?.company}</div>
-                  <div className="flex flex-wrap items-center justify-between gap-2 md:flex-row">
-                    <div className="text-md md:text-md font-semibold text-gray-600">
-                      {exp?.position}
+                  <div className="flex-1 cursor-pointer">
+                    <div className="text-lg font-bold md:text-lg">{exp?.company}</div>
+                    <div className="flex flex-wrap items-center justify-between gap-2 md:flex-row">
+                      <div className="text-md md:text-md font-semibold text-gray-600">
+                        {exp?.position}
+                      </div>
+                      <div className="text-sm font-semibold">{exp?.date}</div>
                     </div>
-                    <div className="text-sm font-semibold">{exp?.date}</div>
                   </div>
                 </div>
-              </div>
 
-              <div className=" text-md px-4 text-justify font-normal  text-gray-500">
-                <p>{exp?.details}</p>
-              </div>
-              {exp?.companyUrl && (
-                <div className="flex flex-row justify-end">
-                  <a
-                    href={exp?.companyUrl}
-                    target="_blank"
-                    className=" pl-4 text-xs font-medium text-gray-500"
-                    rel="noreferrer"
-                  >
-                    Visit website →
-                  </a>
+                <div className=" text-md px-4 text-justify font-normal  text-gray-500">
+                  <p>{exp?.details}</p>
                 </div>
-              )}
-            </div>
-          );
-        })}
+                {exp?.companyUrl && (
+                  <div className="flex flex-row justify-end">
+                    <a
+                      href={exp?.companyUrl}
+                      target="_blank"
+                      className=" pl-4 text-xs font-medium text-gray-500"
+                      rel="noreferrer"
+                    >
+                      Visit website →
+                    </a>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }

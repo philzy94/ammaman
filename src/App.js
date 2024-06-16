@@ -11,8 +11,15 @@ import Skills from './pages/skills';
 import Contact from './pages/contact';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useLocation } from 'react-router-dom';
 
 function App() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -33,14 +40,16 @@ function App() {
     <div className="">
       {/* <Preloader></Preloader> */}
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/about" element={<About></About>}></Route>
-        <Route path="/experience" element={<Experience></Experience>}></Route>
-        <Route path="/projects" element={<Projects></Projects>}></Route>
-        <Route path="/skills" element={<Skills></Skills>}></Route>
-        <Route path="/contact" element={<Contact></Contact>}></Route>
-      </Routes>
+      <div className=" mt-7 flex min-h-[95vh] flex-col justify-between">
+        <Routes>
+          <Route path="/" element={<Home></Home>}></Route>
+          <Route path="/about" element={<About></About>}></Route>
+          <Route path="/experience" element={<Experience></Experience>}></Route>
+          <Route path="/projects" element={<Projects></Projects>}></Route>
+          <Route path="/skills" element={<Skills></Skills>}></Route>
+          <Route path="/contact" element={<Contact></Contact>}></Route>
+        </Routes>
+      </div>
     </div>
   );
 }
