@@ -9,7 +9,7 @@ export default function Navbar() {
   }
 
   function toggleNav() {
-    setShowNav(!showNav);
+    //setShowNav(!showNav);
   }
 
   function closeMobileNavOnResize() {
@@ -22,12 +22,11 @@ export default function Navbar() {
 
   return (
     <div className="topbar w-full bg-white">
-      <div className="profile-pic">
-        <img src="{ProfilePic}" alt="" />
-      </div>
-      <div onClick={toggleNav} className="nav-toggler pt-1 pr-1">
-        <i className="fa fa-bars" aria-hidden="true"></i>
-      </div>
+      {false && (
+        <div onClick={toggleNav} className="nav-toggler pt-1 pr-1">
+          <i className="fa fa-bars" aria-hidden="true"></i>
+        </div>
+      )}
       <div className={`tabs ${showNav && 'mobile-tabs'}`}>
         <Link to="/">
           <a
