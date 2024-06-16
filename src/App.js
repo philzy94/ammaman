@@ -11,7 +11,6 @@ import Skills from './pages/skills';
 import Contact from './pages/contact';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Footer from './components/footer';
 
 function App() {
   useEffect(() => {
@@ -42,7 +41,6 @@ function App() {
         <Route path="/skills" element={<Skills></Skills>}></Route>
         <Route path="/contact" element={<Contact></Contact>}></Route>
       </Routes>
-      <Footer />
     </div>
   );
 }

@@ -95,8 +95,8 @@ const experiences = [
     position: 'Full-Stack Developer Intern',
     company: '(ICTSS)',
     details:
-      'ICTSS is an IT security institute that deals with IT security. I worked with ICTSS as an itern during my 6 months indurial traing, I was working as a software developer intern building software applications,',
-    date: 'Oct 2016 - OMar 2017',
+      'ICTSS is an IT security institute that deals with IT security. I worked with ICTSS as an itern during my 6 months indurial training, I was working as a software developer intern building software applications,',
+    date: 'Oct 2016 - April 2017',
     img: null,
     companyUrl: '',
   },
