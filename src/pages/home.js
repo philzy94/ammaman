@@ -11,7 +11,7 @@ export default function Home() {
         data-aos="zoom-in"
         className=" flex flex-1 flex-col items-center justify-center text-center"
       >
-        <div className=" mx-auto mb-3 h-48 w-48 overflow-hidden rounded-full border-x-2 border-white shadow">
+        <div className=" mx-auto mb-3 h-44 w-44 overflow-hidden rounded-full border-x-2 border-white shadow">
           <img
             src={profilePic}
             alt="Philemon Shekari Ammaman"
