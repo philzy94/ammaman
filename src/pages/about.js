@@ -1,67 +1,72 @@
 import React from 'react';
+import Footer from '../components/footer';
 
 export default function About() {
   return (
-    <div
-      data-aos="zoom-in"
-      className="flex h-screen flex-col justify-center p-5 py-8  md:px-52 md:py-20"
-      id="about"
-    >
-      <div className="">
-        <h3 className="mb-3 text-2xl font-extrabold">A little more about me</h3>
+    <div className="flex h-screen flex-col justify-between">
+      <div
+        data-aos="zoom-in"
+        className="flex h-full flex-col justify-center p-5 py-8 md:px-52 md:py-20"
+        id="about"
+      >
+        <div className="">
+          <h3 className="mb-3 text-2xl font-extrabold">A little more about me</h3>
 
-        <div className="items-center space-y-8 md:space-y-0">
-          <div className="basis-2/3 space-y-4">
-            <p className="text-justify text-sm font-normal text-gray-500">
-              I am a highly enthusiastic and competitive person who enjoys being around individuals
-              who challenge my limits, and I, in turn, strive to push them as well. I have a passion
-              for acquiring new skills and sharing my knowledge. Taking on complex challenges is a
-              personal passion of mine. I prefer not to adhere to a single technique for an extended
-              period and instead proactively seek alternative approaches to tasks.
-            </p>
-            <p className="text-justify text-sm font-normal text-gray-500">
-              My primary tools are HTML, CSS, JavaScript, and PHP. Although I frequently switch
-              between different languages, frameworks, and libraries, my current focus is on
-              Laravel, Vue.js, Tailwind CSS, Bootstrap, and React.js.
-            </p>
+          <div className="items-center space-y-8 md:space-y-0">
+            <div className="basis-2/3 space-y-4">
+              <p className="text-justify text-sm font-normal text-gray-500">
+                I am a highly enthusiastic and competitive person who enjoys being around
+                individuals who challenge my limits, and I, in turn, strive to push them as well. I
+                have a passion for acquiring new skills and sharing my knowledge. Taking on complex
+                challenges is a personal passion of mine. I prefer not to adhere to a single
+                technique for an extended period and instead proactively seek alternative approaches
+                to tasks.
+              </p>
+              <p className="text-justify text-sm font-normal text-gray-500">
+                My primary tools are HTML, CSS, JavaScript, and PHP. Although I frequently switch
+                between different languages, frameworks, and libraries, my current focus is on
+                Laravel, Vue.js, Tailwind CSS, Bootstrap, and React.js.
+              </p>
+            </div>
           </div>
-        </div>
-        <div className="items-center justify-between md:flex">
-          <div className="flex items-center justify-center space-x-4 py-10">
-            {social.map((link, index) => {
-              return (
-                <a
-                  key={`about${index}`}
-                  href={link.link}
-                  target={'_blank'}
-                  rel="noreferrer"
-                  className="relative rounded-full"
-                >
-                  <span
-                    className=" text-gray-500"
-                    dangerouslySetInnerHTML={{ __html: link.icon }}
-                  />
-                </a>
-              );
-            })}
-          </div>
-          <div className="flex items-center justify-center">
-            <a
-              className="flex w-max cursor-pointer items-center space-x-4 rounded-lg border bg-slate-200 p-2 px-9"
-              href={'https://drive.google.com/file/d/1L-MxXB76Db6NCn7eTmeS2OZa-PhlBEt5/view'}
-              target={'_blanck'}
-              rel="noreferrer"
-            >
-              <div>Resume</div>
-              <img
-                className="h-6 w-6"
-                src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
-                alt=""
-              ></img>
-            </a>
+          <div className="items-center justify-between md:flex">
+            <div className="flex items-center justify-center space-x-4 py-10">
+              {social.map((link, index) => {
+                return (
+                  <a
+                    key={`about${index}`}
+                    href={link.link}
+                    target={'_blank'}
+                    rel="noreferrer"
+                    className="relative rounded-full"
+                  >
+                    <span
+                      className=" text-gray-500"
+                      dangerouslySetInnerHTML={{ __html: link.icon }}
+                    />
+                  </a>
+                );
+              })}
+            </div>
+            <div className="flex items-center justify-center">
+              <a
+                className="flex w-max cursor-pointer items-center space-x-4 rounded-lg border bg-slate-200 p-2 px-9"
+                href={'https://drive.google.com/file/d/1L-MxXB76Db6NCn7eTmeS2OZa-PhlBEt5/view'}
+                target={'_blanck'}
+                rel="noreferrer"
+              >
+                <div>Resume</div>
+                <img
+                  className="h-6 w-6"
+                  src="https://img.icons8.com/material-outlined/48/000000/link--v1.png"
+                  alt=""
+                ></img>
+              </a>
+            </div>
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
