@@ -119,8 +119,8 @@ export default function Projects() {
         </div>
         <br />
         <h3 className="mt-3 text-2xl font-extrabold">Let&apos;s work together</h3>
-        <p className="mb-8 text-gray-600">
-          I am currently open to work engagements. If i look like who you&apos;re looking for,you
+        <p className="text-gray-6500 mb-8 text-justify">
+          I am currently open to work engagements. If i look like who you&apos;re looking for, you
           can reach out to me via email at holyphilzy@gmail.com or social media.
         </p>
       </div>
