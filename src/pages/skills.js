@@ -3,7 +3,7 @@ import Footer from '../components/footer';
 
 export default function Skills() {
   return (
-    <div className="flex min-h-[95vh] flex-col justify-between">
+    <div className="flex min-h-[95vh] flex-col justify-between bg-slate-50">
       <div
         data-aos="zoom-in"
         className="flex flex-col bg-slate-50 p-5 py-8 md:px-52 md:py-20"

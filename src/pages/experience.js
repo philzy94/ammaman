@@ -6,7 +6,7 @@ export default function Experience() {
     <div className="flex min-h-[95vh] flex-col justify-between">
       <div
         data-aos="zoom-in"
-        className="justify-cente flex w-screen flex-col bg-slate-50 p-5 pt-20 md:px-52"
+        className="justify-cente flex w-screen flex-col bg-slate-50 p-5 py-8 md:px-52 md:py-20"
         id="experience"
       >
         <div>

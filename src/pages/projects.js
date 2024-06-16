@@ -52,7 +52,7 @@ export default function Projects() {
     <div className="flex min-h-[95vh] flex-col justify-between">
       <div
         data-aos="zoom-in"
-        className="relative flex flex-col justify-center overflow-hidden p-5 pt-20 md:px-52"
+        className="relative flex flex-col justify-center overflow-hidden p-5 py-8 md:px-52 md:py-20"
         id="projects"
       >
         <div className=" mx-auto w-full pb-8">
