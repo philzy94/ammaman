@@ -47,7 +47,9 @@ export default function About() {
             <div className="flex items-center justify-center">
               <a
                 className="flex w-max cursor-pointer items-center space-x-4 rounded-lg border bg-slate-200 p-2 px-9"
-                href={'https://drive.google.com/file/d/1L-MxXB76Db6NCn7eTmeS2OZa-PhlBEt5/view'}
+                href={
+                  'https://docs.google.com/document/d/1uWckulvgLCi_WtPnupxSAwAladrLs8AQ/edit?usp=sharing&ouid=114949133139480357143&rtpof=true&sd=true'
+                }
                 target={'_blanck'}
                 rel="noreferrer"
               >
