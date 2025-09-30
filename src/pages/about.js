@@ -11,17 +11,29 @@ export default function About() {
           <div className="items-center space-y-8 md:space-y-0">
             <div className="basis-2/3 space-y-4">
               <p className="text-justify text-sm font-normal text-gray-500">
-                I am a highly enthusiastic and competitive person who enjoys being around
-                individuals who challenge my limits, and I, in turn, strive to push them as well. I
-                have a passion for acquiring new skills and sharing my knowledge. Taking on complex
-                challenges is a personal passion of mine. I prefer not to adhere to a single
-                technique for an extended period and instead proactively seek alternative approaches
-                to tasks.
+                I am a highly motivated and goal-oriented software developer with over 4 years of 
+                experience delivering scalable solutions across diverse industries. With strong 
+                expertise in both frontend and backend development, I have worked extensively with 
+                technologies such as JavaScript, PHP, React.js, Vue.js, Node.js, Laravel, Tailwind 
+                CSS, Bootstrap, MySQL, and PostgreSQL.
               </p>
               <p className="text-justify text-sm font-normal text-gray-500">
-                My primary tools are HTML, CSS, JavaScript, and PHP. Although I frequently switch
-                between different languages, frameworks, and libraries, my current focus is on
-                Laravel, Vue.js, Tailwind CSS, Bootstrap, and React.js.
+                Driven by curiosity and a passion for continuous learning, I thrive in dynamic 
+                environments where I can take on complex challenges, explore alternative approaches, 
+                and push the boundaries of what’s possible. I enjoy collaborating with individuals 
+                who challenge my perspective while also sharing my knowledge to inspire growth in others.
+              </p>
+
+              <p className="text-justify text-sm font-normal text-gray-500">
+                My versatility and adaptability allow me to seamlessly switch between tools and 
+                frameworks, while my current focus lies in building efficient, 
+                user-centric solutions with Laravel, React.js, Vue.js, and modern CSS frameworks. 
+                Above all, I am committed to leveraging technology to solve problems, create value, 
+                and drive innovation.
+              </p>
+
+              <p className="text-justify text-sm font-normal text-gray-500">
+              I hold a B.Sc. in Computer Science from Kaduna State University (2013–2018) and earned a Software Engineering certification from Qwasar Silicon Valley (2022–2023), further strengthening my technical expertise and ability to deliver world-class software solutions.
               </p>
             </div>
           </div>

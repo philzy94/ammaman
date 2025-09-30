@@ -73,20 +73,21 @@ const experiences = [
     company: 'Outsource Global',
     details:
       'Outsource Global is an outsourcing company that connects with cleints both national and international to provide services in different sectors. I am currently working as a frontend developer, building a web application with React.Js to consume an API built in the company.',
-    date: 'Sep 2022 – Till Date',
+    date: 'Sep 2022 – August 2025',
     img: 'https://www.outsourceglobal.com/logo.png',
     companyUrl: 'https://www.outsourceglobal.com/',
   },
 
   {
-    position: 'Full-Stack Developer',
-    company: 'CodeIcon,',
+    position: 'Full-Stack Remote Developer',
+    company: 'AntzHub,',
     details:
-      'CodeIcon is an IT firm in Nigerian based in Kaduna State, it provides solutions to clients to help them achieve their goals. I stated working as an intern but currently working as a full software developer, building solutions to for clients.',
-    date: 'July 2019 - Till date',
-    img: 'https://codeicontechnologies.com/images/codeicon.png',
-    companyUrl: 'https://codeicontechnologies.com',
+      'Antzhub Ltd is an Abuja-based technology company that provides software development, AI, cloud, data analytics, digital marketing, consultancy, and training services.',
+    date: 'February 2023 – March 2025',
+    img: 'https://antzhub.com/wp-content/uploads/2019/01/logo-e1547727273365.png',
+    companyUrl: 'https://antzhub.com ',
   },
+
   {
     position: 'Full-Stack Developer',
     company: 'Lotusfort Technologies Limited',
@@ -96,6 +97,18 @@ const experiences = [
     img: 'https://static.b2bhint.com/_next/image?url=https%3A%2F%2Fcdn.b2bhint.com%2Fcompany-avatar%2Fupload_830f5c4651aa231d783dc61482450a58.jpg&w=128&q=75',
     companyUrl: '',
   },
+
+  {
+    position: 'Full-Stack Developer',
+    company: 'CodeIcon,',
+    details:
+      'CodeIcon is an IT firm in Nigerian based in Kaduna State, it provides solutions to clients to help them achieve their goals. I stated working as an intern but currently working as a full software developer, building solutions to for clients.',
+    date: 'January 2021 – February 2023',
+    img: 'https://codeicontechnologies.com/images/codeicon.png',
+    companyUrl: 'https://codeicontechnologies.com',
+  },
+  
+  
   {
     position: 'Full-Stack Developer Intern',
     company: '(ICTSS)',
